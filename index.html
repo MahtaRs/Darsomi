@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="lib/bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <meta charset="utf-8">
+    <title>Hello</title>
+  </head>
+  <body ng-app="darsomiApp">
+    <header>
+      <div class="container shadow-sm p-3 mb-5 bg-white rounded">
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <center>
+            <div class="shadow p-3 mb-5 bg-white rounded">
+              <ul class="nav nav-tabs justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref-active="active" aria-current="page" href="#" ui-sref="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref-active="active" aria-current="page" href="#" ui-sref="shop.courses">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ui-sref-active="active" aria-current="page" ui-sref="myAccount.login">My Account</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> -->
+              </ul>
+            </div>
+            <div class="container shadow-sm p-3 mb-5 bg-white rounded fig">
+              This Is Fig
+              <ui-view></ui-view>
+            </div>
+            <div class="container shadow-sm p-3 mb-5 bg-white rounded result">
+              This Is Result
+            </div>
+          </center>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="alert d-flex justify-content-center alert-dark" role="alert">
+        Mohammad Mahdi Tajik
+      </div>
+    </footer>
+    <!-- BootStrap -->
+    <script src="lib/jquery-3.5.1.min.js"></script>
+    <script src="lib/popper.min.js"></script>
+    <script src="lib/bootstrap5/js/bootstrap.min.js"></script>
+    <!-- Angular Js -->
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <!-- Modules -->
+    <script src="src/common/common.module.js"></script>
+    <script src="src/public/public.module.js"></script>
+    <!-- Apps -->
+    <script src="src/darsomi.app.js"></script>
+    <!-- Public Routes -->
+    <script src="src/public/public.routes.js"></script>
+  </body>
+</html>
