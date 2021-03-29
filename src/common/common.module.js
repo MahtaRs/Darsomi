@@ -1,4 +1,5 @@
 (function(){
     'use strict';
-    angular.module("common" , []);
+    angular.module("common" , [])
+    .constant("MyWebsiteDomain" , "localhost/darsomi/public");
 })();

@@ -1,1 +1,24 @@
-This is dashboard
+<div class="row">
+    <div class="col-md-2"></div>
+    <ul class="nav col-md-8 nav-pills nav-fill">
+        <li class="nav-item">
+            <a class="nav-link" ui-sref-active="active" href="#" ui-sref="dashboard.courses">Courses</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " ui-sref-active="active" href="#" ui-sref="dashboard.achievments">Achievments</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " ui-sref-active="active" href="#" ui-sref="dashboard.profile">Profile</a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link ">My Purchases</a>
+        </li> -->
+        <li class="nav-item danger">
+            <a class="nav-link " ui-sref-active="active" href="#" ui-sref="dashboard.mailBox">MailBox</a>
+        </li>
+    </ul>
+    <div class="col-md-2"></div>
+</div>
+<div class="row">
+    <ui-view></ui-view>
+</div>

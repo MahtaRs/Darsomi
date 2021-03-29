@@ -1,0 +1,145 @@
+The is Single Course Template
+ID is {{id}}
+<div class="row cifPicNBuyField shadow">
+    <div class="col-md-7 cifBuyField">
+        <div class="courseTitle">
+            <div class="title">
+                Title
+            </div>
+        </div>
+        <div class="institute">
+            Darsomi Institute
+        </div>
+        <div class="price">
+            180000
+        </div>
+        <div class="courseButtons container row">
+            <div class=" col-md-6">
+                <button class="likeButton">
+                    Like
+                    <i class="fa fa-heart"></i>
+                </button>
+            </div>
+            <div class=" col-md-6">
+                <button class="addToCartButton">
+                    Add To Cart
+                    <i class="fa fa-shopping-cart"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 cifPicture shadow">
+        <div class="picInFocus">
+            <img id="picInFocusToSee" src="{{picsInLine[0].src}}" alt="">
+        </div>
+        <div class="picsInLine">
+            <button ng-click="scroller('.picsInLineToSee',0)">
+                <
+            </button>
+                <!-- <h2 class="font-weight-light">Bootstrap 4 Horizontal Scrolling Cards with Flexbox</h2> -->
+            <div class="picsInLineToSee">
+                <img ng-class="{'active':get_attribute('picInFocusToSee','src') == pic.src}" ng-src="{{pic.src}}" ng-repeat="pic in picsInLine track by $index" ng-click="picInFocusSelector(pic.src)" alt="">
+            </div>
+            <button ng-click="scroller('.picsInLineToSee',1)">
+                >
+            </button>
+        </div>
+    </div>
+</div>
+<div class="row cifCourseSpec shadow">
+        <div class="col-md-4">
+            <div>
+                Capacity
+                <br>
+                45
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div>
+                Duration
+                <br>
+                36
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div>
+                Weeks
+                <br>
+                7
+            </div>
+        </div>
+        <!-- <div class="tick" data-did-init="handleTickInit">
+
+            <div data-layout="horizontal fit">
+          
+                <span data-key="hours" data-transform="pad(00)" data-view="flip"></span>
+          
+                <span data-view="text" data-key="sep" class="tick-text-inline"></span>
+          
+                <span data-key="minutes" data-transform="pad(00)" data-view="flip"></span>
+          
+                <span data-view="text" data-key="sep" class="tick-text-inline"></span>
+          
+                <span data-key="seconds" data-transform="pad(00)" data-view="flip"></span>
+          
+            </div>
+          
+        </div> -->
+</div>
+<div class="row cifDescription mt-2 shadow">
+    Course Description
+</div>
+<div class="row cifSimilarCourses mt-2 shadow">
+    <p class="cardCarTitle">
+        Similar Courses
+    </p>
+    <div class="cardSliderParent">
+        <div class="moveLeft cardCarSweeper" ng-click="ArrayFrameSweeper(trendingCourses,carFlags.trendingCourses,0)">
+          <p>
+            Left
+          </p>
+        </div>
+        <div class="cardSlider">
+          <course-in-shop course="singleCourse" ng-repeat="singleCourse in ArrayFrameSelector(trendingCourses,carFlags.trendingCourses) track by $index" class="oneCardInSlider"></course-in-shop>
+        </div>
+        <div class=" cardCarSweeper moveRight" ng-click="ArrayFrameSweeper(trendingCourses,carFlags.trendingCourses,1)">
+          Right
+        </div>
+    </div>
+</div>
+<div class="cifCourseComments mt-2 shadow">
+    <div class="title">
+        Comments
+    </div>
+    <div class="row singleComment shadow">
+        <div class="container">
+            <div class="name">
+                Name Of Commentor
+            </div>
+        </div>
+        <div class=" timeAdded">
+            <div class="date">
+                2020/19/8
+            </div>
+            <div class="clock">
+                20:23:24
+            </div>
+        </div>
+        <div class="commentText">
+            This is comment text.
+        </div>
+        <div class="usefulOrNot">
+            <button class="useFul">
+                <i class="fa fa-thumbs-up"></i>
+            </button>
+            <button class="notUseFul">
+                <i class="fa fa-thumbs-down"></i>
+            </button>
+        </div>
+        <div class="report">
+            <button>
+                <i class="fas fa-exclamation-triangle"></i>
+            </button>
+        </div>
+    </div>
+</div>

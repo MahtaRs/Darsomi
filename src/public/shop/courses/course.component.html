@@ -1,0 +1,71 @@
+<!-- <div class="container mt-3 rounded shadow">
+
+    <center>
+        <br>
+        <div class="imagecon shadow">
+            <img src="media/pic/1.jpg" >
+        </div>
+    </center>
+    <center>
+        <div class="mt-3 text-center">
+            <div class="">
+                4.5
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-success">+Cart</a>
+                <a href="#" class="btn btn-primary">More</a>
+            </div>
+            <div class="mb-5 text-muted">
+                2 days ago
+            </div>
+        </div>
+    </center>
+</div> -->
+
+    <div class="courseCard">
+        <div class="courseCardTitle">
+          <p>{{$ctrl.course.title}}</p>
+        </div>
+        <div class="courseCardPicture">
+          <img src="media/pic/1.jpg" alt="">
+        </div>
+        <div class="courseCardInstitute">
+          <img src="https://upload.wikimedia.org/wikipedia/fa/thumb/a/a9/Sharif_logo.svg/800px-Sharif_logo.svg.png" class="insLogo" alt="">
+          دانشگاه صنعتی شریف
+        </div>
+        <div class="courseCardButton">
+          <button class="commerceButton addtobasket">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+          <!-- <button class="btn-outline success">
+            <i class="fas fa-check-circle"></i>
+            <span>success</span>
+          </button> -->
+          <!-- <button  class="commerceButton moreinfo">
+            <a ui-sref="shop.singleCourse({id:$ctrl.course.id})" href="#"><i class="fas fa-plus"></i></a>
+          </button> -->
+          <a ui-sref="shop.singleCourse({id:$ctrl.course.id})" href="#" class="commerceButton moreinfo">
+            <i class="fas fa-plus"></i>
+          </a>
+        </div>
+        <div class="courseCardPrice">
+          112,000 Toman
+        </div>
+        
+        <div class="courseCardInfo">
+          <div class="capacity">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            15/35
+          </div>
+          <div class="duration">
+            <i class="fas fa-clock"></i>
+            45
+          </div>
+          <div class="weeks">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            3
+          </div>
+        </div>
+    </div>

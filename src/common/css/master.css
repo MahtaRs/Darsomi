@@ -1,0 +1,690 @@
+@font-face {
+    font-family: 'persianVazir';
+    src: url('../../../lib/fonts/persian/vazir-font-v16.1.0/Vazir.woff');
+  }
+@font-face{
+    font-family: 'englishRobotoCondensed';
+    src: url('../../../lib/fonts/english/robotoCondensed/RobotoCondensed-Regular.ttf');
+}
+button:focus{
+    outline: 0px;
+}
+body {
+    background-image: url("../../../media/pic/Japanese Wave Seamless Pattern.svg");
+    background-color: lightgray;
+    font-family:'persianVazir','englishRobotoCondensed','Playfair Display', serif ;
+}
+header {
+    background-color: aquamarine;
+    background-image: url("../../../media/pic/Spiral Abstract Seamless Pattern.svg");
+}
+main {
+    width:100%;
+}
+.topNavContainer{
+    display: flex;
+    justify-content: center;
+}
+.top-nav{
+    border-style: none;
+    width:fit-content;
+}
+.top-nav .nav-link {
+    border-radius: 0px;
+    /* margin-left: 3px;
+    margin-right: 3px; */
+    border-style: none;
+    color:blue;
+    font:16px;
+}
+.top-nav .nav-link.left {
+    border-radius: 5px 0px 0px 5px;
+}
+.top-nav .nav-link.right {
+    border-radius: 0px 5px 5px 0px;
+}
+.top-nav .nav-link:hover{
+    border-style:none;
+    transition: 0.2s;
+    background-color:skyblue;
+    color:white;
+}
+.top-nav .activeS{
+    background-color: blue !important;
+    border-style:none;
+    color:white;
+}
+.top-nav .activeS:hover{
+    color:yellow;
+}
+.fig {
+    /* width:100%  !important; */
+    width:90%;
+}
+course-in-shop > div{
+    background-color:cornsilk;
+    width:6cm !important;
+}
+course-in-shop .imagecon{
+    border-radius: 50%;
+    border-style: none;
+    width: fit-content;
+    height: fit-content;
+    background-color: aqua;
+}
+course-in-shop img{
+    object-fit:scale-down;
+    width: 2.5cm;
+    height: 2.5cm;
+    border-radius: 50%;
+    border-style: none;
+}
+.pagination{
+    overflow-x:auto;
+    /* display: inline-flex; */
+    width:100%;
+}
+/* @media(min-width:800px){
+    .pagination{
+        justify-content: center;
+    }
+}
+@media(max-width:800px){
+    .pagination{
+        justify-content: left;
+    }
+} */
+.pagination li a{
+    border-radius: 50%;
+}
+.txt-inputs {
+    border-radius: 10px;
+    transition: 0.2s;
+    background-color: lightgray;
+    
+}
+.txt-inputs:focus{
+    transition: 0.2s;
+    box-shadow: blueviolet 0px 0px 10px;
+    border-radius: 10px;
+    background-color: lightcyan;
+}
+.single-profile-course{
+    //background-color: lightyellow;
+    border-radius: 5px;
+    border-color: blue;
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+.single-profile-course .navigator{
+    //background-color:powderblue;
+    border-radius: 5px;
+    border-color: blue;
+    border-width: 2px;
+    border-style: solid;
+    
+}
+.navigator{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: fit-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.navigator .sideLinks{
+    list-style-type: none;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+}
+.navigator .sideNavLink{
+    height: 1cm;
+    margin-top: 5px;
+    margin-bottom:5px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    transition: 0.2s;
+    border-radius: 5px;
+    border-color: orange;
+    border-width: 2px;
+    border-style: none;
+}
+.navigator .sideNavLink:hover{
+    transition: 0.2s;
+    border-style: solid;
+    //background-color: teal;
+    //color:white;
+    cursor: pointer;
+}
+.navigator .sideNavLink a{
+    //color:white;
+    text-decoration: none;
+
+}
+.upperTimelineNavigator .progress{
+}
+.upperTimelineNavigator ul{
+    display: flex;
+    flex-direction:row;
+    list-style-type: none;
+    justify-content: center;
+}
+.upperTimelineLink{
+    background-color: aqua;
+    transition: 0.2s;
+}
+.upperTimelineNavigator .upperTimelineLink:hover{
+    transition: 0.2s;
+    box-shadow: grey 10px 10px 10px;
+    background-color: blueviolet;
+    color:white;
+}
+.mainCarousel{
+    height:10cm;
+}
+.courseCard {
+    min-width:7cm;
+    width:90%;
+    height:10cm;
+    border-radius: 5px;
+    background-color:white;
+    box-shadow:  2px 4px 10px grey; 
+    display: inline-grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 30% 20% 10% 10% 10%;
+}
+.cardShadow{
+    border-radius: 5px;
+    background-color:white;
+    box-shadow:  2px 4px 10px grey; 
+}
+.courseCard .courseCardTitle{
+    grid-column: 1/2 ;
+    grid-row: 1/2;
+    font-size: 16;
+
+}
+.courseCard .courseCardPicture{
+    grid-column: 1/2;
+    grid-row: 2/3;
+
+}
+.courseCard .courseCardInstitute{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+.courseCard .courseCardInstitute .insLogo{
+    margin-top: 5px;
+    height:1cm;
+    width:1cm;
+    object-fit: scale-down;
+    display: block;
+}
+.courseCard .courseCardInstitute .insName{
+    
+}
+.courseCard .courseCardButton{
+    grid-column: 1/2;
+    grid-row: 5/6;
+
+}
+.courseCard .courseCardPrice{
+    grid-column:1/2;
+    grid-row:4/5;
+    font-size: 20px;
+    color:#5FD00B;
+}
+.courseCard .courseCardInfo{
+    border-top: 2px solid black;
+    grid-column:1/2;
+    grid-row:6/7;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 100%;
+    padding-top:10px;
+}
+.courseCard .courseCardInfo .capacity{
+    grid-column:1/2;
+    grid-row:1/2;
+}
+.courseCard .courseCardInfo .duration{
+    grid-column:2/3;
+    grid-row:1/2;
+}
+.courseCard .courseCardInfo .weeks{
+    grid-column:3/4;
+    grid-row:1/2;
+}
+.commerceButton{
+    border-radius: 2px;
+    min-width:3cm;
+    border-width: 2px;
+    border-style: solid;
+    transition: 0.2s;
+    display:inline-block;
+}
+/* .commerceButton a{
+    width:100% !important;
+    height:100%;
+    display: block;
+} */
+.commerceButton:hover{
+    transition: 0.2s;
+}
+.commerceButton:focus{
+    outline:0px;
+}
+.courseCard .courseCardButton .addtobasket{
+    background-color: lightgreen;
+    border-color: #84E33E;
+}
+.courseCard .courseCardButton .addtobasket:hover{
+    background-image: linear-gradient(to top , #5AC609 , #5FD00B , #4CDB62);
+    background-color: #4CDB62;
+    color: white;
+}
+.courseCard .courseCardButton .addtobasket:focus{
+    /* background-color: chartreuse; */
+    
+}
+.courseCard .courseCardButton .moreinfo{
+    border-color: #7ED8F7;
+    background-color: lightcyan;
+}
+.courseCard .courseCardButton .moreinfo:hover{
+    background-image:linear-gradient(to top,#2E9DC4 , #2EBAC4 ,  #3ED8E3);
+    /* background-color: #2EBAC4; */
+    color: white;
+}
+.courseCard .courseCardButton .moreinfo:focus{
+    /* border-color: #7ED8F7; */
+}
+.courseCard .courseCardPicture img {
+    border-radius:50%;
+    height: 3cm;
+    width:  3cm;
+    object-fit: scale-down;
+    box-shadow: 1px 1px 10px grey;
+}
+.cardCarTitle {
+    font-size:24px;
+    border-bottom: 3px solid blue;
+}
+.bestCourse{
+    width: fit-content;
+}
+.bestTeachersandCoursesContainer{
+    width:fit-content;
+    background-color: lightgreen;
+}
+.bestTeacherCard{
+    height: 8cm;
+    /* display:inline-block; */
+    margin:10px;
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15% 35% 30% 20%;
+    min-width:5cm;
+}
+.bestTeachers{
+    width: 90%;
+    height:70%;
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+}
+.teacherPoint{
+    color:green;
+    font-size: 18px;
+    grid-column: 1/2;
+    grid-row:4/5;
+}
+.teacherName{
+    grid-column: 1/2;
+    grid-row:3/4;
+}
+.teacherRank{
+    grid-column: 1/2;
+    grid-row:1/2;
+    text-align:center;
+    padding-top: 3px;
+    font-size:25px;
+    color:blue;
+}
+.teacherPic{
+    grid-column: 1/2;
+    grid-row:2/3;
+    height: 2.5cm;
+    width:2.5cm;
+    border-radius: 50%;
+    object-fit: scale-down;
+    box-shadow: 1px 1px 10px grey;
+}
+.cardSliderParent{
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 100%;
+}
+.cardSlider{
+    height:11cm;
+    grid-column: 2/3;
+    grid-row:1/2;
+}
+.cardSlider .oneCardInSlider{
+    max-width:24%;
+    margin:5px;
+}
+.cardSlider .cardCarSweeper{
+    height:100%;
+    width:100%;
+    transition: 0.2s;
+    
+}
+.cardSliderParent .moveRight{
+    grid-row:1/2;
+    grid-column:3/4;
+    display:grid;
+    place-items: center;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+.cardSliderParent .moveLeft{
+    grid-row:1/2;
+    grid-column:1/2;
+    display:grid;
+    place-items: center;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+.cardSliderParent .moveLeft:hover{
+    background-image:linear-gradient(to left , rgba(179,179,179,1) , rgba(179,179,179,0));
+    transition: 0.2s;
+}
+.cardSliderParent .moveRight:hover{
+    background-image:linear-gradient(to right , rgba(179,179,179,1) , rgba(179,179,179,0));
+    transition: 0.2s;
+}
+.pagination li a{
+    width:30px !important;
+    height:30px !important;
+    text-decoration: none;
+    color:black;
+    background-color: #7ED8F7;
+    display: grid;
+    place-content: center;
+    transition:0.2s;
+}
+.pagination li a:hover{
+    background-color: #00eeff;
+    transition:0.2s;
+}
+.customPageLinkActive{
+    transition: 0.2s;
+    color:white !important;
+    background-color: blue !important;
+
+}
+.customPageLinkActive:hover{
+    transition: 0.2s;
+    color:yellow !important;
+
+}
+.cifPicNBuyField{
+    width:90%;
+    border-radius:10px;
+}
+/* Single Course In Focus */
+.cifPicture{
+    height:10cm;
+    border-radius:10px;
+    margin-top:5px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80% 20%;
+    /* background-image:linear-gradient( 90deg, rgba(104, 49, 233, 0.996) 0%, rgb(251,205,241) 100%); */
+}
+.cifPicture .picInFocus{
+    grid-column:1/2;
+    grid-row:1/2;
+    overflow: hidden;
+}
+.cifPicture .picInFocus img{
+    width:90%;
+    height:90%;
+    margin-top:10px;
+    object-fit: scale-down;
+    border-radius:20px;
+}
+.cifPicture .picsInLine{
+    grid-column:1/2;
+    grid-row:2/3;
+    display: inline-flex;
+    place-content: center;
+    place-items: center;
+}
+.cifPicture .picsInLine button{
+    display: inline-block;
+    /* margin-bottom:5px; */
+    /* padding-bottom: 15px; */
+    height:1cm;
+    width:1cm;
+    border-radius:50%;
+    background-image: linear-gradient(to top , pink,lightcyan,pink);
+    border:royalblue;
+    border-width: 1px;
+    border-style: solid;
+    transition:0.2s;
+    color:black;
+}
+.cifPicture .picsInLine button:hover{
+    transition:0.2s;
+    background-image: linear-gradient(to top,pink,lightcyan);
+}
+.cifPicture .picsInLine button:focus{
+    background-color:blue;
+    color:white;
+}
+.cifPicture .picsInLine div{
+    display: inline-flex;
+    justify-content: flex-start;
+    overflow: scroll;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+    width:80%;
+}
+.cifPicture .picsInLine div img{
+    width:1cm;
+    height:1cm;
+    border-radius: 50%;
+    margin-right:3px;
+    object-fit: scale-down;
+    float:left;
+    border-style: solid;
+    border-color:blue;
+}
+.cifPicture .picsInLine div img:hover{
+    border-color:seagreen;
+}
+.cifPicture .picsInLine div img.active{
+    border-color:yellow;
+    box-shadow:0px 0px 1px 1px grey;
+    
+}
+.cifBuyField{
+    min-height:10cm;
+    height:fit-content;
+    
+    /* width:90%; */
+    /* background-image: linear-gradient(67deg , rgba(193, 145, 255, 0.87) 12%, rgb(0, 238, 255) 100%); */
+    margin:5px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 20% 20% 30%;
+}
+.cifBuyField .courseTitle{
+    grid-column:1/2;
+    grid-row:1/2;
+
+}
+.cifBuyField .courseTitle .title{
+    border-bottom-color: skyblue;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    font-size:26px;
+}
+.cifBuyField .institute{
+    grid-column:1/2;
+    grid-row:2/3;
+}
+.cifBuyField .price{
+    grid-column:1/2;
+    grid-row:3/4;
+    color:green;
+    font-size: 26px;
+}
+.cifBuyField .courseButtons{
+    grid-column:1/2;
+    grid-row:4/5;
+}
+.courseButtons button{
+    border-style: solid;
+    border-width:2px;
+    border-radius:20px;
+    width:90%;
+    height:1.2cm;
+    transition: 0.2s;
+    background-image: rgba(12,12,12,0);
+}
+.courseButtons button:focus{
+    outline: 0px;
+}
+
+.courseButtons .likeButton{
+    border-color:pink;
+}
+.courseButtons .likeButton:hover{
+    background-color: rgb(255, 172, 241);;
+    transition: 0.2s;
+}
+.courseButtons .addToCartButton{
+    border-color:#5AC609;
+}
+.courseButtons .addToCartButton:hover{
+    background-color: green;
+    transition: 0.2s;
+}
+.cifCourseSpec{
+    border-radius:10px;
+    width:90%;
+    place-items: center;
+}
+.cifCourseSpec .col-md-4{
+    /* margin-right:5px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display:flex;
+    place-content: center;
+}
+.cifCourseSpec .col-md-4 div{
+    font-size:26px;
+    box-shadow: 0px 0px 5px 1px grey;
+    border-radius:50%;
+    height:4cm;
+    width:4cm;
+    display:grid;
+    place-items: center;
+}
+.cifDescription{
+    border-radius:10px;
+    width:90%;
+}
+.cifSimilarCourses{
+    border-radius:10px;
+    width:90%;
+}
+.cifCourseComments{
+    border-radius:10px;
+    width:90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.cifCourseComments .title{
+    font-size: 26px;
+    border-bottom: 3px solid skyblue;
+    margin-bottom:10px;
+}
+.cifCourseComments .singleComment{
+    border-radius:10px;
+    width:90%;
+    background-color:rgb(236, 247, 247);
+    padding-bottom: 10px;
+}
+.cifCourseComments .singleComment .name{
+    font-size:18px;
+    margin-top:4px;
+    
+}
+.cifCourseComments .singleComment .timeAdded{
+    border-bottom: rgba(179,179,179,1);
+    border-bottom-style: dashed;
+}
+.cifCourseComments .singleComment .timeAdded div{
+    display: inline-block;
+    margin:5px;
+}
+.cifCourseComments .singleComment .usefulOrNot{
+    margin-bottom: 5px;
+    border-top: rgba(179,179,179,1);
+    border-top-style:dashed;
+    padding-top: 5px;
+    
+}
+.cifCourseComments .singleComment .usefulOrNot button{
+    height:1cm;
+    width:1cm;
+    border-radius:50%;
+    /* color:white; */
+    border-style: solid;
+}
+.cifCourseComments .singleComment .usefulOrNot .useFul{
+    border-color:green;
+    background-color: transparent;
+    color:green;
+    transition: 0.2s;
+}
+.cifCourseComments .singleComment .usefulOrNot .useFul:hover{
+    background-color: rgb(56, 153, 56);
+    transition: 0.2s;
+    color:white;
+}
+.cifCourseComments .singleComment .usefulOrNot .notUseFul{
+    border-color: red;
+    background-color: transparent;
+    color:red;
+    transition: 0.2s;
+}
+.cifCourseComments .singleComment .usefulOrNot .notUseFul:hover{
+    background-color: rgb(255, 91, 91);
+    transition: 0.2s;
+    color:white;
+}
+.cifCourseComments .singleComment .report button{
+    border-radius:5px;
+    border-color: orange;
+    border-style: dotted;
+    background-color: transparent;
+    color:orange;
+    transition: 0.2s;
+}
+.cifCourseComments .singleComment .report button:hover{
+    color:white;
+    background-color: orange;
+    transition: 0.2s;
+}

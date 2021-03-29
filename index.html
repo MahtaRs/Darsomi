@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lib/video-js/video-js.css">
+    <!-- <link rel="stylesheet" href="lib/flip/flip.min.css"> -->
     <link rel="stylesheet" href="lib/bootstrap5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="src/common/css/master.css">
+    <!-- <link href="src/common/css/buttons.scss"> -->
+    <link href="lib/fontawesome-free-5.15.2-web/css/all.css" rel="stylesheet">
     <meta charset="utf-8">
     <title>Hello</title>
   </head>
   <body ng-app="darsomiApp">
     <header>
-      <div class="container shadow-sm p-3 mb-5 bg-white rounded">
+      <!-- <div class="container shadow-sm p-3 mb-5 bg-white rounded">
+        <center style="color:blue;">
+          Darsomi
+        </center>
+      </div> -->
+      <!-- <a href="https://www.freevector.com/spiral-abstract-seamless-pattern-29007">FreeVector.com</a> -->
+      <div class="topNavContainer mb-3 container shadow p-3">
+        <nav class="top-nav nav rounded bg-white  sticky-top nav-tabs justify-content-center">
+              <a class="nav-link left" ui-sref-active="activeS" aria-current="page" href="#" ui-sref="home">Home</a>
+              <a class="nav-link" ui-sref-active="activeS" aria-current="page" href="#" ui-sref="shop">Shop</a>
+              <a class="nav-link" ui-sref-active="activeS" aria-current="page" ui-sref="myAccount">My Account</a>
+              <a class="nav-link" ui-sref-active="activeS" aria-current="page">Cart</a>
+              <a class="nav-link right" ui-sref-active="activeS" aria-current="page" ui-sref="dashboard">Dashboard</a>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
+        </nav>
       </div>
     </header>
     <main>
-      <div class="container">
-        <div class="row">
           <center>
-            <div class="shadow p-3 mb-5 bg-white rounded">
-              <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link" ui-sref-active="active" aria-current="page" href="#" ui-sref="home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" ui-sref-active="active" aria-current="page" href="#" ui-sref="shop.courses">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" ui-sref-active="active" aria-current="page" ui-sref="myAccount.login">My Account</a>
-                </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li> -->
-              </ul>
-            </div>
-            <div class="container shadow-sm p-3 mb-5 bg-white rounded fig">
-              This Is Fig
+            
+            <div class="rounded shadow bg-white fig">
+              
               <ui-view></ui-view>
             </div>
-            <div class="container shadow-sm p-3 mb-5 bg-white rounded result">
-              This Is Result
-            </div>
           </center>
-        </div>
-      </div>
     </main>
     <footer>
-      <div class="alert d-flex justify-content-center alert-dark" role="alert">
+      <div class="mt-3 alert d-flex justify-content-center alert-dark" role="alert">
         Mohammad Mahdi Tajik
       </div>
     </footer>
@@ -54,12 +54,51 @@
     <!-- Angular Js -->
     <script src="lib/angular.js"></script>
     <script src="lib/angular-ui-router.min.js"></script>
+    <!-- Video JS -->
+    <script src="lib/video-js/video.min.js"></script>
+    <!-- Flip JS -->
+    <!-- <script src="lib/flip/flip.min.js"></script> -->
     <!-- Modules -->
     <script src="src/common/common.module.js"></script>
     <script src="src/public/public.module.js"></script>
     <!-- Apps -->
     <script src="src/darsomi.app.js"></script>
-    <!-- Public Routes -->
+    <!-- Controllers -->
+    <script src="src/public/shop/courses/courses.controller.js"></script>
+    <script src="src/public/shop/course/single-course.controller.js"></script>
+    <!-- Services -->
+    <script src="src/common/Services/common.service.js"></script>
+    <script src="src/public/shop/courses/courses.service.js"></script>
+    <script src="src/public/shop/course/single-course.service.js"></script>
+    <!-- Components -->
+    <script src="src/public/shop/courses/course.component.js"></script>
+    <!-- Routes -->
     <script src="src/public/public.routes.js"></script>
+    <!-- Dashboard -->
+    <script src="src/public/myaccount/dashboard/dashboard.module.js"></script>
+    <script src="src/public/myaccount/dashboard/dashboard.routes.js"></script>
+    <!-- Prfile Courses -->
+    <script src="src/public/myaccount/dashboard/courses/courses.module.js"></script>
+    <script src="src/public/myaccount/dashboard/courses/courses.service.js"></script>
+    <script src="src/public/myaccount/dashboard/courses/courses.controller.js"></script>
+    <!-- Pofile Mailbox -->
+    <script src="src/public/myaccount/dashboard/mailbox/mailbox.module.js"></script>
+    <script src="src/public/myaccount/dashboard/mailbox/mailbox.controller.js"></script>
+    <!-- Profile -->
+    <script src="src/public/myaccount/dashboard/profile/profile.module.js"></script>
+    <script src="src/public/myaccount/dashboard/profile/profile.controller.js"></script>
+    <!-- Achievments -->
+    <script src="src/public/myaccount/dashboard/achievments/achievments.module.js"></script>
+    <script src="src/public/myaccount/dashboard/achievments/achievments.controller.js"></script>
+    <!-- LoginSignup -->
+    <script src="src/public/myaccount/login-signup.module.js"></script>
+    <script src="src/public/myaccount/signup/signup.controller.js"></script>
+    <script src="src/public/myaccount/login/login.controller.js"></script>
+    <!-- My account module -->
+    <script src="src/public/myaccount/myaccount.module.js"></script>
+    <!-- Master JS -->
+    <script src="src/common/master.js"></script>
+    <!-- Home -->
+    <script src="src/public/home/home.controller.js"></script>
   </body>
 </html>

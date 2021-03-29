@@ -1,1 +1,16 @@
 This is courses !
+<!-- <input type="text" ng-model="Corcn.coursescount">
+<br>
+Items in one page : <input type="number" ng-model="Corcn.items_in_one_page" min="1" max="8" ng-change="Corcn.courses()">
+{{Corcn.coursescount}}
+width: {{width}} -->
+<div class="row">
+    <course-in-shop course="course" ng-repeat="course in CoursesFrameSelector() track by $index" class="col-md-4 mt-2 mb-2"></course-in-shop>
+</div>
+<div class="row mt-5">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination d-inline-flex justify-content-md-center justify-content-sm-start">
+            <li ng-repeat="ppnum in [].constructor(Corcn.number_of_pages) track by $index"><a class="customPageLink" ui-sref-active="customPageLinkActive" href="#" ui-sref="shop.courses({page:$index+1})">{{$index+1}}</a></li>
+        </ul>
+    </nav>
+</div>

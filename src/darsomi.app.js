@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    angular.module('darsomiApp' , ['public'])
+    angular.module('darsomiApp' , ['public' , 'myAccount'])
     .config(config);
     config.$inject = ['$urlRouterProvider'];
     function config($urlRouterProvider) {

@@ -1,1 +1,274 @@
-This is home !
+<!-- <link href="lib/stacked-card-slider/stackedCards.css" rel="stylesheet" />
+<script src="lib/stacked-card-slider/stackedCards.min.js"></script>
+<div class="container">
+    <div class="stacked-cards example">
+        <ul>
+          <li>
+            Card 1
+          </li>
+          <li>
+            Card 2
+          </li>
+          <li>
+            Card 3
+          </li>
+          ...
+        </ul>
+      </div>
+</div>
+<script>
+    var stackedCardSlide = new stackedCards({ selector: '.example' });
+    stackedCardSlide.init();
+</script> -->
+<!-- <img src="media/pic/2.jpg" alt=""> -->
+<div class="mainCarousel rounded shadow bg-light">
+
+</div>
+<div class="row">
+  <div class="col-lg-8 d-flex flex-row justify-content-center">
+    <div class="mt-2 ml-2 container bg-white shadow rounded">
+      <p class="cardCarTitle">
+        Best Teachers
+      </p>
+      {{width}} &
+      {{height}}
+        <div class="bestTeachers row">
+          <div class="bestTeacherCard cardShadow col-md-3">
+            <div class="teacherRank">
+              1
+            </div>
+            <img class="teacherPic" src="media/pic/1.jpg" alt="">
+            <div class="teacherName">
+              Thomas Bloom
+            </div>
+            <div class="teacherPoint">
+              9000
+            </div>
+          </div>
+          <div class="bestTeacherCard cardShadow col-md-3">
+            <div class="teacherRank">
+              2
+            </div>
+            <img class="teacherPic" src="media/pic/1.jpg" alt="">
+            <div class="teacherName">
+              Henry Ford
+            </div>
+            <div class="teacherPoint">
+              11000
+            </div>
+          </div>
+          <div class="bestTeacherCard cardShadow col-md-3">
+            <div class="teacherRank">
+              3
+            </div>
+            <img class="teacherPic" src="media/pic/1.jpg" alt="">
+            <div class="teacherName">
+              Elon Musk
+            </div>
+            <div class="teacherPoint">
+              12000
+            </div>
+          </div>
+          <!-- <div class="sigleCardInCar col-md-4 bestTeachers cardShadow">
+
+          </div>
+          <div class="sigleCardInCar col-md-4 bestTeachers cardShadow">
+  
+          </div>
+          <div class="sigleCardInCar col-md-4 bestTeachers cardShadow">
+  
+          </div> -->
+        </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="bestCourse container pb-2 mt-2 bg-white shadow rounded">
+      <p class="cardCarTitle">
+        Best Course
+      </p>
+      <div class="courseCard">
+        <div class="courseCardTitle">
+          <p>برنامه نویسی پایتون مقدماتی</p>
+        </div>
+        <div class="courseCardPicture">
+          <img src="media/pic/1.jpg" alt="">
+        </div>
+        <div class="courseCardInstitute">
+          <img src="https://upload.wikimedia.org/wikipedia/fa/thumb/a/a9/Sharif_logo.svg/800px-Sharif_logo.svg.png" class="insLogo" alt="">
+          دانشگاه صنعتی شریف
+        </div>
+        <div class="courseCardButton">
+          <button class="commerceButton addtobasket">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+          <!-- <button class="btn-outline success">
+            <i class="fas fa-check-circle"></i>
+            <span>success</span>
+          </button> -->
+          <button class="commerceButton moreinfo">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+        <div class="courseCardPrice">
+          112,000 Toman
+        </div>
+        
+        <div class="courseCardInfo">
+          <div class="capacity">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            15/35
+          </div>
+          <div class="duration">
+            <i class="fas fa-clock"></i>
+            45
+          </div>
+          <div class="weeks">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            3
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="container mt-2 bg-white shadow rounded">
+    <p class="cardCarTitle">
+      Trending
+    </p>
+    <div class="cardSliderParent">
+      <div class="moveLeft cardCarSweeper" ng-click="ArrayFrameSweeper(trendingCourses,carFlags.trendingCourses,0)">
+        <p>
+          Left
+        </p>
+      </div>
+      <div class="cardSlider">
+        <course-in-shop course="singleCourse" ng-repeat="singleCourse in ArrayFrameSelector(trendingCourses,carFlags.trendingCourses) track by $index" class="oneCardInSlider"></course-in-shop>
+      </div>
+      <div class=" cardCarSweeper moveRight" ng-click="ArrayFrameSweeper(trendingCourses,carFlags.trendingCourses,1)">
+        Right
+      </div>
+    </div>
+    
+  </div>
+  <div class="container mt-2 bg-white shadow rounded">
+    <p class="cardCarTitle">
+      Best Sellings
+    </p>
+    <div class="cardSliderParent">
+      <div class="moveLeft cardCarSweeper" ng-click="ArrayFrameSweeper(bestSellingCourses,carFlags.bestSellingCourses,0)">
+        <p>
+          Left
+        </p>
+      </div>
+      <div class="cardSlider">
+        <!-- <div class="courseCard oneCardInSlider" ng-repeat="singleCourse in ArrayFrameSelector(bestSellingCourses,carFlags.bestSellingCourses) track by $index">
+          <div class="courseCardTitle">
+            <p>
+              {{singleCourse.title}}
+            </p>
+          </div>
+          <div class="courseCardPicture">
+            <img src="media/pic/1.jpg" alt="">
+          </div>
+          <div class="courseCardInstitute">
+            <img src="https://upload.wikimedia.org/wikipedia/fa/thumb/a/a9/Sharif_logo.svg/800px-Sharif_logo.svg.png" class="insLogo" alt="">
+            {{singleCourse.institute}}
+          </div>
+          <div class="courseCardButton">
+            <button class="commerceButton addtobasket">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
+            <button class="commerceButton moreinfo">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+          <div class="courseCardPrice">
+            {{singleCourse.price}} Toman
+          </div>
+          <div class="courseCardInfo">
+            <div class="capacity">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              {{singleCourse.capacity}}
+            </div>
+            <div class="duration">
+              <i class="fas fa-clock"></i>
+              {{singleCourse.duration}}
+            </div>
+            <div class="weeks">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              {{singleCourse.weeks}}
+            </div>
+          </div>
+        </div> -->
+        <course-in-shop course="singleCourse" ng-repeat="singleCourse in ArrayFrameSelector(bestSellingCourses,carFlags.bestSellingCourses) track by $index" class="oneCardInSlider"></course-in-shop>
+      </div>
+      <div class=" cardCarSweeper moveRight" ng-click="ArrayFrameSweeper(bestSellingCourses,carFlags.bestSellingCourses,1)">
+        Right
+      </div>
+    </div>
+    
+  </div>
+  <div class="container mt-2 bg-white shadow rounded">
+    <p class="cardCarTitle">
+      A Quick Look
+    </p>
+    
+  </div>
+  <div class="container mt-2 bg-white shadow rounded">
+    <p class="cardCarTitle">
+      Institutes
+    </p>
+    
+    <div class="cardSlider">
+      <div class="cardSlider">
+        <div class="courseCard oneCardInSlider" ng-repeat="x in [].constructor(nOfCardsInSlider) track by $index">
+          <div class="courseCardTitle">
+            <p>
+              {{trendingCourses[$index].title}}
+            </p>
+          </div>
+          <div class="courseCardPicture">
+            <img src="media/pic/1.jpg" alt="">
+          </div>
+          <div class="courseCardInstitute">
+            <img src="https://upload.wikimedia.org/wikipedia/fa/thumb/a/a9/Sharif_logo.svg/800px-Sharif_logo.svg.png" class="insLogo" alt="">
+            {{trendingCourses[$index].institute}}
+          </div>
+          <div class="courseCardButton">
+            <button class="commerceButton addtobasket">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </button>
+            <!-- <button class="btn-outline success">
+              <i class="fas fa-check-circle"></i>
+              <span>success</span>
+            </button> -->
+            <button class="commerceButton moreinfo">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+          <div class="courseCardPrice">
+            {{trendingCourses[$index].price}} Toman
+          </div>
+          <div class="courseCardInfo">
+            <div class="capacity">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              {{trendingCourses[$index].capacity}}
+            </div>
+            <div class="duration">
+              <i class="fas fa-clock"></i>
+              {{trendingCourses[$index].duration}}
+            </div>
+            <div class="weeks">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              {{trendingCourses[$index].weeks}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<a href="https://www.freevector.com/japanese-wave-seamless-pattern-28767#">FreeVector.com</a>
