@@ -9,6 +9,9 @@
 button:focus{
     outline: 0px;
 }
+input:focus{
+    outline: 0px;
+}
 body {
     background-image: url("../../../media/pic/Japanese Wave Seamless Pattern.svg");
     background-color: lightgray;
@@ -556,7 +559,7 @@ course-in-shop img{
 .courseButtons button{
     border-style: solid;
     border-width:2px;
-    border-radius:20px;
+    border-radius:5px;
     width:90%;
     height:1.2cm;
     transition: 0.2s;
@@ -572,6 +575,7 @@ course-in-shop img{
 .courseButtons .likeButton:hover{
     background-color: rgb(255, 172, 241);;
     transition: 0.2s;
+    color:white;
 }
 .courseButtons .addToCartButton{
     border-color:#5AC609;
@@ -579,6 +583,7 @@ course-in-shop img{
 .courseButtons .addToCartButton:hover{
     background-color: green;
     transition: 0.2s;
+    color:white;
 }
 .cifCourseSpec{
     border-radius:10px;
@@ -687,4 +692,69 @@ course-in-shop img{
     color:white;
     background-color: orange;
     transition: 0.2s;
+}
+/* Login Form Container */
+.loginFormContainer{
+    padding-top:30px;
+}
+.loginFormContainer form{
+    border-style: dashed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* Cart */
+.cartContainer{
+    width:90%;
+    margin-top:1cm;
+    margin-bottom:1cm;
+    border-style:solid;
+    border-color: darkgrey;
+    border-radius:5%;
+}
+.cartContainer thead{
+    background-color: grey;
+    color:white;
+    font-size:18px;
+    border-radius:20px;
+}
+.cartContainer tbody{
+
+}
+.cartContainer tbody tr{
+    border-bottom: darkgrey dotted;
+}
+.cartContainer tbody tr .courseThumbnail{
+    height:1cm;
+    width:1cm;
+    border-radius:5px;
+    object-fit: scale-down;
+    box-shadow: 0px 0px 1px 1px darkgrey;
+    background-color: darkred;
+}
+.noItemInCartWarning{
+    height:10cm;
+    width:90%;
+    display: grid;
+    place-items: center;
+    border-style:solid;
+    border-width:1px;
+    border-radius:5px;
+    margin-bottom:1cm;
+    margin-top:1cm;
+    box-shadow: 0px 0px 5px 1px grey;
+}
+.sumOfEveryThingInCart{
+    border-style:solid;
+    width:90%;
+    border-collapse: collapse;
+    border-color:black;
+    background-color:ghostwhite;
+}
+.sumOfEveryThingInCart td{
+    border-collapse: collapse;
+    border-color:grey;
+    border-style:solid;
+    border-width:1px;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

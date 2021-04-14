@@ -74,6 +74,12 @@
         url:"/dashboard",
         templateUrl:"src/public/myaccount/dashboard/dashboard.template.html",
         redirectTo:"dashboard.courses"
-      });
+      })
+      .state('cart', {
+        url:'/cart',
+        templateUrl:"src/public/cart/cart.template.html",
+        controller:"CartController as cntrl"
+      }
+      );
   }
 })();
